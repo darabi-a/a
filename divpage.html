@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>طراحی صفحه</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    button{
+        background-color: rgb(211, 84, 0);
+        padding: 10px 20px; 
+        margin: 0px 0;
+        display: inline-block; 
+        border: 0px;
+        border-radius: 10px;
+        margin-top: 0px; 
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+    }
+    
+    button:hover{
+        background-color: rgb(179, 71, 0);
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    
+    /* هدر */
+    .site-header {
+        flex-shrink: 0;
+    }
+    
+    /* بخش اصلی که اسکرول می‌شود - اسکرول چپ */
+    .main-scroll-container {
+        flex: 1;
+        overflow-y: auto;
+        overflow-y: overlay; /* برای برخی مرورگرها */
+        display: flex;
+        flex-direction: column;
+        direction: ltr; /* تغییر جهت برای اسکرول چپ */
+    }
+    
+    /* کانتینر دو بخش */
+    .content-wrapper {
+        display: flex;
+        flex: 1;
+        direction: rtl; /* محتوا راست‌چین بماند */
+    }
+    
+    .sidebar {
+        width: 18%;
+        background-color: rgb(185, 185, 185);
+        padding: 20px;
+    }
+    
+    .main-content {
+        width: 82%;
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        text-align: center;
+    }
+    
+    /* فوتر جدید */
+    .site-footer {
+        background-color: darkorange;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        flex-shrink: 0;
+        margin-top: auto;
+        border-top: 3px solid rgb(211, 84, 0);
+        direction: rtl; /* فوتر راست‌چین بماند */
+    }
+    
+    /* کانتینر اصلی برای محتوا و فوتر */
+    .main-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 100%;
+        direction: rtl; /* محتوای داخلی راست‌چین */
+    }
+    
+    /* استایل اسکرول بار برای چپ */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 6px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+    
+    /* برای فایرفاکس */
+    .main-scroll-container {
+        scrollbar-width: thin;
+        scrollbar-color: #888 #f1f1f1;
+    }
+</style>
+</head>
+<body dir="rtl">
+    <!-- هدر -->
+    <div class="site-header">
+        <div style="width: 100%; background-color: black;">
+            <header>
+                <div style="
+                    display: flex;
+                    align-items: center;
+                    background-color: darkorange;
+                    padding: 15px 20px;
+                    position: relative;
+                    height: 70px;
+                ">
+                    <div style="text-align: right;">
+                        <a href="file:///C:/Users/Fanuss%20Pc/Desktop/divpage.html"><h2 style="margin: 0; color: rgb(0, 0, 0);padding: 10px 10px;">فروشگاه محصولات ایرانی</h2></a>
+                    </div>
+                    
+                    <div style="
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    ">
+                        <a href="file:///C:/Users/Fanuss%20Pc/Desktop/divpage.html"><img src="cartpng.parspng.com-6.png" height="50" alt="لوگو"></a>
+                    </div>
+                    
+                    <div style="margin-left: auto; width: 200px;">
+                    </div>
+                </div>
+                
+                <nav style="background-color: rgb(238, 131, 0); text-align: center; padding: 0; height: 40px;">
+                    <button>صفحه اصلی</button>
+                    <button>عضویت در سایت</button>
+                    <button>ورود به سایت</button>
+                    <button>خرید محصولات</button>
+                    <button>ارتباط با ما</button>
+                </nav>
+            </header>
+        </div>
+    </div>
+    
+    <div class="main-scroll-container">
+        <div class="main-content-wrapper">
+            <!-- بخش محتوای اصلی -->
+            <div class="content-wrapper">
+                <!--منو کناری-->
+                <div class="sidebar">
+                    <h1>منو کناری</h1>
+                    <p>آیتم منو ۱</p>
+                    <p>آیتم منو ۲</p>
+                    <p>آیتم منو ۳</p>
+                    <p>آیتم منو ۴</p>
+                    <p>آیتم منو ۵</p>
+                </div>
+
+                <!--صفحه اصلی سایت-->
+                <div class="main-content">
+                    <img src="IMG_20250910_030116.jpg" width="360" height="270" style="max-width: 100%;">
+                    <h3>محصولات ویژه</h3>
+                    <p>محصولات جدید و با کیفیت ایرانی</p>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><h1>m</h1>
+                </div>
+            </div>
+            
+            <!--فوتر سایت - در پایین قرار می‌گیرد-->
+            <div class="site-footer">
+                <h2>فروشگاه محصولات ایرانی</h2>
+                <p>آدرس: تهران، خیابان نمونه، پلاک ۱۲۳</p>
+                <p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸ | ایمیل: info@example.com</p>
+                <p>تمامی حقوق برای فروشگاه محصولات ایرانی محفوظ است</p>
+
+                <p style="font-weight: bold; margin-top: 10px;">توسط امیر</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
